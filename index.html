@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TreatyGraph: Real-Time Visualization of Treaty Participation</title>
+
+    <!-- Load deck.gl for WebGL-based geospatial visualizations -->
+    <script src="https://unpkg.com/deck.gl@^9.0.0/dist.min.js"></script>
+
+    <!-- Load MapLibre GL for base map rendering -->
+    <script src='https://unpkg.com/maplibre-gl@3.6.0/dist/maplibre-gl.js'></script>
+    <link href='https://unpkg.com/maplibre-gl@3.6.0/dist/maplibre-gl.css' rel='stylesheet' />
+
+    <!-- Load local stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- UI controls wrapper -->
+    <div id="ui-wrapper">
+
+      <!-- Range slider to control max treaty participant filter -->
+      <div id="controls">
+        <div id="participant-control">
+          <label for="participant-slider">
+            Max Treaty Participants: <span id="participant-value">30</span>
+          </label>
+          <input type="range" id="participant-slider" min="0" max="7" step="1" value="2" />
+        </div>
+      </div>
+
+      <!-- Donut chart for treaty category breakdown -->
+      <div id="chart-container"></div>
+
+      <!-- Horizontal bar chart for population (top 10 countries) -->
+      <div id="pop-chart-container"></div>
+
+      <!-- Horizontal bar chart for GDP (top 10 countries) -->
+      <div id="gdp-chart-container"></div>
+    </div>
+
+    <!-- Treaty list output for selected country -->
+    <div id="treaty-list"></div>
+
+    <!-- Map interaction hint -->
+    <div id="hint">Hold Shift or Right click to rotate and pitch map</div>
+
+    <!-- Load main JavaScript module -->
+    <script type="module" src="main.js"></script>
+
+    <!-- Introductory modal with explanation -->
+    <div id="info-modal">
+      <div class="modal-box">
+        <h2>Welcome to TreatyGraph: Real-Time Visualization of Treaty Participation with a Wikidata backend</h2>
+        <p>Use the slider to explore treaty participation between countries. Click any country on the map to update the visualization.</p>
+        <button id="dismiss-btn">Got it</button>
+      </div>
+    </div>
+
+    <!-- Tooltip container shared by charts and maps -->
+    <div id="tooltip" style="position:absolute; padding:6px 10px; background:white; border:1px solid #ccc; border-radius:4px; pointer-events:none; font-size:12px; display:none; z-index:3000;"></div>
+  </body>
+</html>
