@@ -25,11 +25,10 @@ A YouTube walkthrough of TreatyGraph will be available here soon.
 
 ## 🛠️ Technologies Used
 
-- [Deck.gl](https://deck.gl) for high-performance WebGL visualizations  
-- [MapLibre GL](https://maplibre.org) for open-source map rendering  
+- [Deck.gl](https://deck.gl) for high-performance WebGL visualizations 
 - [D3.js](https://d3js.org) for charts (donut and bar charts)  
 - [Wikidata](https://www.wikidata.org/wiki/Wikidata:Main_Page) as the live data source via SPARQL  
-- Vanilla JavaScript + Vite for a fast frontend development experience  
+- Vanilla JavaScript for a fast frontend development experience  
 - GeoJSON + custom data preprocessing for map layers  
 
 ---
