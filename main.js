@@ -38,6 +38,16 @@ const deckgl = new DeckGL({
   getTooltip: ({ object }) => object?.properties?.name
 });
 
+const uiWrapper = document.getElementById('ui-wrapper');
+
+// Slide in
+uiWrapper.classList.add('slide-in');
+
+// Or toggle it later (e.g., with a button)
+document.getElementById('toggle-btn').addEventListener('click', () => {
+  uiWrapper.classList.toggle('slide-in');
+});
+
 // Setup the slider and label for controlling treaty participant filter
 const slider = document.getElementById("participant-slider");
 slider.value = "2";
