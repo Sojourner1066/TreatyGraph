@@ -15,9 +15,11 @@
   </head>
 
   <body>
+    <div id="ui-toggle-btn">
+      <img id="arrow-icon" src="/chevron-left.svg" alt="Toggle UI" />
+    </div>
     <!-- UI controls wrapper -->
-    <div id="ui-wrapper">
-
+    <div id="ui-wrapper" class="slide-in">
       <!-- Range slider to control max treaty participant filter -->
       <div id="controls">
         <div id="participant-control">
@@ -41,8 +43,15 @@
     <!-- Treaty list output for selected country -->
     <div id="treaty-list"></div>
 
+    <!-- Map recenter toggle -->
+    <div id="recenter-toggle">
+      <label>
+        <input type="checkbox" id="recenter-checkbox" />
+        Recenter map on selected country
+      </label>
+    </div>
     <!-- Map interaction hint -->
-    <div id="hint">Hold Shift or Right click to rotate and pitch map</div>
+    <div id="hint">To pitch or rotate map hold Shift/Cmd or Right click</div>
 
     <!-- Load main JavaScript module -->
     <script type="module" src="main.js"></script>
