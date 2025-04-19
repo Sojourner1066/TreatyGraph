@@ -39,13 +39,12 @@ const deckgl = new DeckGL({
 });
 
 const uiWrapper = document.getElementById('ui-wrapper');
+const toggleBtn = document.getElementById('ui-toggle-btn');
+const arrowIcon = document.getElementById('arrow-icon');
 
-// Slide in
-uiWrapper.classList.add('slide-in');
-
-// Or toggle it later (e.g., with a button)
-document.getElementById('toggle-btn').addEventListener('click', () => {
-  uiWrapper.classList.toggle('slide-in');
+toggleBtn.addEventListener('click', () => {
+  const isVisible = uiWrapper.classList.toggle('slide-in');
+  arrowIcon.src = isVisible ? "/chevron-left.svg" : "/chevron-right.svg";
 });
 
 // Setup the slider and label for controlling treaty participant filter
@@ -76,6 +75,13 @@ slider.addEventListener("input", () => {
   }
 
   updateSliderBackground();
+});
+
+// gets the statues of the recenter toggle
+let recenterOnClick = false;
+
+document.getElementById('recenter-checkbox').addEventListener('change', (e) => {
+  recenterOnClick = e.target.checked;
 });
 
 // Generate ArcLayer showing connections from selected country to treaty members
@@ -116,6 +122,22 @@ async function renderLayers(data, selectedFeature) {
     selectedCountryISO = selectedFeature.properties.iso_a3;
   } else {
     selectedFeature = data.features.find(f => f.properties.iso_a3 === selectedCountryISO);
+  }
+
+  if (recenterOnClick && selectedFeature?.properties?.centroid) {
+    const [lon, lat] = selectedFeature.properties.centroid;
+  
+    deckgl.setProps({
+      initialViewState: {
+        longitude: lon,
+        latitude: lat,
+        zoom: 3,
+        pitch: 30,
+        bearing: 30,
+        transitionDuration: 1000,
+        transitionInterpolator: new deck.LinearInterpolator(['longitude', 'latitude', 'zoom'])
+      }
+    });
   }
 
   const treatyCountryGroups = await getSmallTreatyMembersGrouped(selectedCountryISO, maxParticipants);
