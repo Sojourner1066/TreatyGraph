@@ -44,7 +44,7 @@ const arrowIcon = document.getElementById('arrow-icon');
 
 toggleBtn.addEventListener('click', () => {
   const isVisible = uiWrapper.classList.toggle('slide-in');
-  arrowIcon.src = isVisible ? "/chevron-left.svg" : "/chevron-right.svg";
+  arrowIcon.src = isVisible ? "public/chevron-left.svg" : "public/chevron-right.svg";
 });
 
 // Setup the slider and label for controlling treaty participant filter
