@@ -282,3 +282,36 @@ body {
 #recenter-toggle input {
   margin-right: 6px;
 }
+
+/* Default style */
+.treaty-label {
+  color: #222;
+  transition: color 0.2s ease;
+  cursor: pointer;
+}
+
+/* Dim all labels when *any* one is hovered */
+#treaty-list:hover .treaty-label {
+  color: #b6b6b6;
+}
+
+/* Highlight the one being hovered */
+#treaty-list .treaty-label:hover {
+  color: #222;
+}
+
+.treaty-title {
+  text-align: center;
+  margin: 0.5em 0;
+}
+
+#info-modal {
+  transition: opacity 0.5s ease;
+  opacity: 1;
+  visibility: visible;
+}
+
+#info-modal.fade-out {
+  opacity: 0;
+  visibility: hidden;
+}

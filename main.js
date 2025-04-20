@@ -1,243 +1,212 @@
+// Updated main.js to support recenter checkbox, UI toggle, and charts
 const { DeckGL, GeoJsonLayer, ArcLayer } = deck;
 
-// Import external modules for charting and data handling
-import { wdCategoryCounts } from './js/wdCategoryCount.js';
-import { createSpectralDonutChart } from './js/d3_drawCharts.js';
-import { drawMiniHorizontalBarChart } from './js/d3_drawCharts.js';
+import { getAllCountryMemberships } from './js/wdTreatyDataRetreival.js';
 import { wdGetAllStatsByISO } from './js/wdGetAllStatsByISO.js';
-import { getSmallTreatyMembersGrouped, getUniqueMemberCountries } from './js/wdTreatyMembership.js';
+import { drawMiniHorizontalBarChart } from './js/d3_drawCharts.js';
+import { createSpectralDonutChart } from './js/d3_drawCharts.js';
+import { wdCategoryCounts } from './js/wdCategoryCount.js';
 
-// Initial default selections and global state
+let treatyData = [];
 let selectedCountryISO = "NGA";
 let currentGeoData;
+let countryStatistics = [];
+let recenterOnClick = false;
+
 const presets = [5, 10, 30, 50, 70, 100, 150, Infinity];
 let maxParticipants = presets[2];
 
-// Load all country stats from Wikidata
-let CountryStats = await wdGetAllStatsByISO();
-
-// Filter utility to match only desired ISO codes
-function filterByIsoCodes(data, isoCodes) {
-  const isoSet = new Set(isoCodes);
-  return data.results.bindings.filter(entry => isoSet.has(entry.isoCode.value));
-}
-
-// Initialize DeckGL map visualization
 const deckgl = new DeckGL({
-  mapStyle: 'https://basemaps.cartocdn.com/gl/voyager-gl-style/style.json',
-  initialViewState: {
-    longitude: -2.6753,
-    latitude: 18.0820,
-    zoom: 3,
-    maxZoom: 6,
-    pitch: 30,
-    bearing: 30
-  },
-  controller: true,
-  layers: [],
-  getTooltip: ({ object }) => object?.properties?.name
+    mapStyle: 'https://basemaps.cartocdn.com/gl/voyager-gl-style/style.json',
+    initialViewState: { longitude: 0, latitude: 20, zoom: 2.5, pitch: 30, bearing: 30 },
+    controller: true,
+    layers: [],
+    getTooltip: ({ object }) => object?.properties?.name
 });
 
-const uiWrapper = document.getElementById('ui-wrapper');
-const toggleBtn = document.getElementById('ui-toggle-btn');
-const arrowIcon = document.getElementById('arrow-icon');
+// UI toggle button
+const toggleBtn = document.getElementById("ui-toggle-btn");
+const uiWrapper = document.getElementById("ui-wrapper");
+const arrowIcon = document.getElementById("arrow-icon");
 
-toggleBtn.addEventListener('click', () => {
-  const isVisible = uiWrapper.classList.toggle('slide-in');
-  arrowIcon.src = isVisible ? "public/chevron-left.svg" : "public/chevron-right.svg";
+toggleBtn.addEventListener("click", () => {
+    const isOpen = uiWrapper.classList.toggle("slide-in");
+    arrowIcon.src = isOpen ? "public/chevron-left.svg" : "public/chevron-right.svg";
 });
 
-// Setup the slider and label for controlling treaty participant filter
 const slider = document.getElementById("participant-slider");
-slider.value = "2";
 const valueLabel = document.getElementById("participant-value");
-
-// Function to visually update the slider’s gradient background
-function updateSliderBackground() {
-  const val = +slider.value;
-  const max = +slider.max;
-  const percent = (val / max) * 100;
-
-  slider.style.background = `linear-gradient(to right, #B0ADCA 0%, #B0ADCA ${percent}%, #e0e0e0 ${percent}%, #e0e0e0 100%)`;
-}
-
-// Initialize the slider’s background on load
-updateSliderBackground();
-
-// Respond to slider input: update filter, chart label, and re-render map
+slider.value = "2";
+updateSlider();
 slider.addEventListener("input", () => {
-  const selected = presets[parseInt(slider.value)];
-  maxParticipants = selected;
-  valueLabel.textContent = selected === Infinity ? "All" : selected;
-
-  if (currentGeoData) {
-    renderLayers(currentGeoData, null);
-  }
-
-  updateSliderBackground();
+    maxParticipants = presets[parseInt(slider.value)];
+    valueLabel.textContent = maxParticipants === Infinity ? "All" : maxParticipants;
+    if (currentGeoData) renderMap(selectedCountryISO);
+    updateSlider();
 });
 
-// gets the statues of the recenter toggle
-let recenterOnClick = false;
-
-document.getElementById('recenter-checkbox').addEventListener('change', (e) => {
-  recenterOnClick = e.target.checked;
+document.getElementById("recenter-checkbox").addEventListener("change", (e) => {
+    recenterOnClick = e.target.checked;
 });
 
-// Generate ArcLayer showing connections from selected country to treaty members
-function getArcLayer(data, selectedFeature, targetIsoCodes) {
-  const { centroid } = selectedFeature.properties;
-
-  const featureByIso = Object.fromEntries(
-    data.features.map(f => [f.properties.iso_a3, f])
-  );
-
-  const arcs = targetIsoCodes
-    .map(iso => {
-      const targetFeature = featureByIso[iso];
-      if (!targetFeature || !targetFeature.properties.centroid) return null;
-
-      return {
-        source: centroid,
-        target: targetFeature.properties.centroid
-      };
-    })
-    .filter(d => d);
-
-  return new ArcLayer({
-    id: 'arc',
-    data: arcs,
-    getSourcePosition: d => d.source,
-    getTargetPosition: d => d.target,
-    getSourceColor: [0, 128, 200],
-    getTargetColor: [200, 0, 80],
-    strokeWidth: 4,
-    pickable: true
-  });
+function updateSlider() {
+    const val = +slider.value, max = +slider.max;
+    const percent = (val / max) * 100;
+    slider.style.background = `linear-gradient(to right, #B0ADCA 0%, #B0ADCA ${percent}%, #e0e0e0 ${percent}%, #e0e0e0 100%)`;
 }
 
-// Main render function: updates map and charts based on selection and filters
-async function renderLayers(data, selectedFeature) {
-  if (selectedFeature) {
-    selectedCountryISO = selectedFeature.properties.iso_a3;
-  } else {
-    selectedFeature = data.features.find(f => f.properties.iso_a3 === selectedCountryISO);
-  }
+function getFeatureMap(geoData) {
+    return Object.fromEntries(geoData.features.map(f => [f.properties.iso_a3, f]));
+}
 
-  if (recenterOnClick && selectedFeature?.properties?.centroid) {
-    const [lon, lat] = selectedFeature.properties.centroid;
-  
-    deckgl.setProps({
-      initialViewState: {
-        longitude: lon,
-        latitude: lat,
-        zoom: 3,
-        pitch: 30,
-        bearing: 30,
-        transitionDuration: 1000,
-        transitionInterpolator: new deck.LinearInterpolator(['longitude', 'latitude', 'zoom'])
-      }
+function makeArcLayer(centroid, members, featureByIso, treatyId) {
+    const arcs = members.filter(iso => iso !== selectedCountryISO && featureByIso[iso]?.properties?.centroid)
+        .map(iso => ({ source: centroid, target: featureByIso[iso].properties.centroid }));
+    return new ArcLayer({
+        id: `arc-${treatyId}`,
+        data: arcs,
+        getSourcePosition: d => d.source,
+        getTargetPosition: d => d.target,
+        getSourceColor: [0, 128, 200],
+        getTargetColor: [200, 0, 80],
+        strokeWidth: 3,
+        pickable: true
     });
-  }
-
-  const treatyCountryGroups = await getSmallTreatyMembersGrouped(selectedCountryISO, maxParticipants);
-
-  const sortedTreaties = Object.entries(treatyCountryGroups)
-    .map(([treaty, countries]) => ({ treaty, count: countries.length }))
-    .sort((a, b) => b.count - a.count);
-
-  const container = document.getElementById("treaty-list");
-  container.innerHTML = `
-    <h4 class="treaty-title">Treaties and Number of Members</h4>
-    ${sortedTreaties.map(t => `<div><strong>${t.treaty}</strong>: ${t.count}</div>`).join('')}
-  `;
-
-  const targetIsoCodes = getUniqueMemberCountries(treatyCountryGroups, selectedCountryISO);
-
-  const CategoryCounts = await wdCategoryCounts(selectedCountryISO, treatyCountryGroups);
-  const donutData = Object.entries(CategoryCounts).map(([name, value]) => ({ name, value }));
-
-  const donutContainer = document.querySelector("#chart-container");
-  donutContainer.innerHTML = "";
-  const chart = createSpectralDonutChart(donutData, 420);
-  donutContainer.appendChild(chart);
-
-  const chartDataIsoCodes = [...targetIsoCodes, selectedCountryISO];
-  const selectedData = filterByIsoCodes(CountryStats, chartDataIsoCodes);
-
-  const MAX_LABEL_LENGTH = 15;
-
-  const populationData = selectedData
-    .map(d => ({
-      fullName: d.countryLabel.value,
-      category: d.countryLabel.value.length > MAX_LABEL_LENGTH
-        ? d.countryLabel.value.slice(0, MAX_LABEL_LENGTH) + "…"
-        : d.countryLabel.value,
-      value: d.population?.value ? +d.population.value : 0,
-      highlight: d.isoCode?.value === selectedCountryISO
-    }))
-    .sort((a, b) => b.value - a.value)
-    .slice(0, 10);
-
-  drawMiniHorizontalBarChart(populationData, "#pop-chart-container", "Population by Country (Top 10)");
-
-  const gdpData = selectedData
-    .filter(d => d.gdp && !isNaN(+d.gdp.value))
-    .map(d => ({
-      fullName: d.countryLabel.value,
-      category: d.countryLabel.value.length > MAX_LABEL_LENGTH
-        ? d.countryLabel.value.slice(0, MAX_LABEL_LENGTH) + "…"
-        : d.countryLabel.value,
-      value: +d.gdp.value,
-      highlight: d.isoCode?.value === selectedCountryISO
-    }))
-    .sort((a, b) => b.value - a.value)
-    .slice(0, 10);
-
-  drawMiniHorizontalBarChart(gdpData, "#gdp-chart-container", "GDP by Country (USD) (Top 10)");
-
-  const arcLayer = getArcLayer(data, selectedFeature, targetIsoCodes);
-
-  const countyLayer = new GeoJsonLayer({
-    id: 'geojson',
-    data,
-    stroked: true,
-    filled: true,
-    autoHighlight: true,
-    pickable: true,
-    highlightColor: [158, 154, 200, 120],
-    getFillColor: f => {
-      return f.properties.iso_a3 === selectedCountryISO
-        ? [158, 154, 200, 160]
-        : [203, 201, 226, 120];
-    },
-    updateTriggers: {
-      getFillColor: [selectedCountryISO]
-    },
-    getLineColor: () => [158, 154, 200, 255],
-    lineWidthMinPixels: 1,
-    onClick: info => renderLayers(data, info.object)
-  });
-
-  deckgl.setProps({ layers: [countyLayer, arcLayer] });
 }
 
-// Load GeoJSON data and initialize the app
-fetch('data/WorldPoly_with_centroids.geojson')
-  .then(res => res.json())
-  .then(data => {
-    currentGeoData = data;
-    renderLayers(data);
+function makeBaseLayer(data, selectedISO) {
+    return new GeoJsonLayer({
+        id: `geojson-${selectedISO}`,
+        data,
+        stroked: true,
+        filled: true,
+        autoHighlight: true,
+        pickable: true,
+        highlightColor: [158, 154, 200, 120],
+        getFillColor: f =>
+            f.properties.iso_a3 === selectedISO
+                ? [176, 173, 202, 255]  // #B0ADCA
+                : [203, 201, 226, 120],
+        getLineColor: () => [158, 154, 200, 255],
+        lineWidthMinPixels: 1,
+        onClick: info => renderMap(info.object.properties.iso_a3)
+    });
+}
 
-    // Initialize modal dismiss logic
-    const dismissBtn = document.getElementById('dismiss-btn');
-    const modal = document.getElementById('info-modal');
+function getTreatiesForCountry(isoCode) {
+    return treatyData
+        .filter(org => org.memberCountries.includes(isoCode))
+        .filter(org => org.memberCount <= maxParticipants);
+}
 
-    if (dismissBtn && modal) {
-      dismissBtn.addEventListener('click', () => {
-        modal.style.display = 'none';
-      });
-    } else {
-      console.warn("Modal or dismiss button not found.");
+function filterByIsoCodes(data, isoCodes) {
+    const isoSet = new Set(isoCodes);
+    return data.results.bindings.filter(entry => isoSet.has(entry.isoCode.value));
+}
+
+function drawCountryCharts(selectedISO, treatyGroups) {
+    const MAX_LABEL_LENGTH = 15;
+    const memberCountries = [...new Set(treatyGroups.flatMap(t => t.memberCountries).filter(iso => iso !== selectedISO))];
+    const stats = filterByIsoCodes(countryStatistics, [...memberCountries, selectedISO]);
+
+    const makeBarData = (key, title, containerId) => {
+        const data = stats
+            .filter(d => d[key] && !isNaN(+d[key].value))
+            .map(d => ({
+                fullName: d.countryLabel.value,
+                category: d.countryLabel.value.length > MAX_LABEL_LENGTH
+                    ? d.countryLabel.value.slice(0, MAX_LABEL_LENGTH) + "…"
+                    : d.countryLabel.value,
+                value: +d[key].value,
+                highlight: d.isoCode.value === selectedISO
+            }))
+            .sort((a, b) => b.value - a.value)
+            .slice(0, 10);
+
+        drawMiniHorizontalBarChart(data, containerId, title);
+    };
+
+    makeBarData("population", "Population by Country (Top 10)", "#pop-chart-container");
+    makeBarData("gdp", "GDP by Country (USD) (Top 10)", "#gdp-chart-container");
+}
+
+async function renderMap(isoCode) {
+    selectedCountryISO = isoCode;
+    const selectedFeature = currentGeoData.features.find(f => f.properties.iso_a3 === selectedCountryISO);
+    const { centroid } = selectedFeature.properties;
+
+    if (recenterOnClick && centroid) {
+        const [lon, lat] = centroid;
+        deckgl.setProps({
+            initialViewState: {
+                longitude: lon,
+                latitude: lat,
+                zoom: 3,
+                pitch: 30,
+                bearing: 30,
+                transitionDuration: 1000,
+                transitionInterpolator: new deck.LinearInterpolator(['longitude', 'latitude', 'zoom'])
+            }
+        });
     }
-  });
+
+    const featureByIso = getFeatureMap(currentGeoData);
+    const countryTreaties = getTreatiesForCountry(selectedCountryISO);
+
+    const container = document.getElementById("treaty-list");
+    container.innerHTML = `<h4 class="treaty-title">Treaties & Members<br>Total Treaties:  ${countryTreaties.length}</h4>` +
+        countryTreaties.map(org => `<div class="treaty-label" data-treaty="${org.organization_name}">${org.organization_name}:  ${org.memberCount} Mbrs.</div>`).join('');
+
+    document.querySelectorAll(".treaty-label").forEach(label => {
+        const treaty = countryTreaties.find(t => t.organization_name === label.dataset.treaty);
+        label.addEventListener("mouseover", () => {
+            deckgl.setProps({
+                layers: [makeBaseLayer(currentGeoData, selectedCountryISO), makeArcLayer(centroid, treaty.memberCountries, featureByIso, treaty.organization_name)]
+            });
+        });
+        label.addEventListener("mouseout", () => {
+            deckgl.setProps({
+                layers: [
+                    makeBaseLayer(currentGeoData, selectedCountryISO),
+                    ...countryTreaties.map(t => makeArcLayer(centroid, t.memberCountries, featureByIso, t.organization_name))
+                ]
+            });
+        });
+    });
+
+    const arcLayers = countryTreaties.map(t => makeArcLayer(centroid, t.memberCountries, featureByIso, t.organization_name));
+    deckgl.setProps({ layers: [makeBaseLayer(currentGeoData, selectedCountryISO), ...arcLayers] });
+
+    drawCountryCharts(selectedCountryISO, countryTreaties);
+
+    const categoryData = await wdCategoryCounts(selectedCountryISO, Object.fromEntries(countryTreaties.map(t => [t.organization_name, t.memberCountries])));
+    const donutChart = createSpectralDonutChart(Object.entries(categoryData).map(([name, value]) => ({ name, value })), 420);
+    const donutContainer = document.querySelector("#chart-container");
+    donutContainer.innerHTML = "";
+    donutContainer.appendChild(donutChart);
+}
+
+window.addEventListener("load", () => {
+    Promise.all([
+        fetch('data/WorldPoly_with_centroids.geojson').then(res => res.json()),
+        getAllCountryMemberships(),
+        wdGetAllStatsByISO()
+    ])
+        .then(([geoData, memberships, ctrStats]) => {
+            currentGeoData = geoData;
+            treatyData = memberships;
+            countryStatistics = ctrStats;
+            renderMap(selectedCountryISO);
+            const modal = document.getElementById("info-modal");
+            const dismissBtn = document.getElementById("dismiss-btn");
+
+            if (dismissBtn && modal) {
+                dismissBtn.addEventListener("click", () => {
+                    modal.classList.add("fade-out");
+                    setTimeout(() => {
+                        modal.style.display = "none";
+                    }, 500); // match the CSS transition duration
+                });
+            }
+        });
+});
