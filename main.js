@@ -206,21 +206,29 @@ window.addEventListener("load", () => {
         getAllCountryMemberships(),
         wdGetAllStatsByISO()
     ])
-        .then(([geoData, memberships, ctrStats]) => {
-            currentGeoData = geoData;
-            treatyData = memberships;
-            countryStatistics = ctrStats;
-            renderMap(selectedCountryISO);
-            const modal = document.getElementById("info-modal");
-            const dismissBtn = document.getElementById("dismiss-btn");
+    .then(([geoData, memberships, ctrStats]) => {
+        currentGeoData = geoData;
+        treatyData = memberships;
+        countryStatistics = ctrStats;
+        
+        renderMap(selectedCountryISO);
 
-            if (dismissBtn && modal) {
-                dismissBtn.addEventListener("click", () => {
-                    modal.classList.add("fade-out");
-                    setTimeout(() => {
-                        modal.style.display = "none";
-                    }, 500); // match the CSS transition duration
-                });
-            }
-        });
+
+        const spinner = document.querySelector(".loading-spinner");
+        const dismissBtn = document.getElementById("dismiss-btn");
+        if (spinner && dismissBtn) {
+            spinner.style.display = "none";
+            dismissBtn.style.display = "inline-block";
+        }
+
+        const modal = document.getElementById("info-modal");
+        if (dismissBtn && modal) {
+            dismissBtn.addEventListener("click", () => {
+                modal.classList.add("fade-out");
+                setTimeout(() => {
+                    modal.style.display = "none";
+                }, 500); // match the CSS transition duration
+            });
+        }
+    });
 });
