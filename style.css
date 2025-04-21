@@ -314,3 +314,12 @@ body {
   opacity: 0;
   visibility: hidden;
 }
+
+a.treaty-label {
+  text-decoration: none;   /* Removes underline */
+  color: inherit;          /* Inherits color from parent element */
+}
+
+a.treaty-label:visited {
+  color: inherit;          /* Prevents "visited" color change */
+}

@@ -151,7 +151,8 @@ async function renderMap(isoCode) {
     }
 
     const featureByIso = getFeatureMap(currentGeoData);
-    const countryTreaties = getTreatiesForCountry(selectedCountryISO);
+    const countryTreaties = getTreatiesForCountry(selectedCountryISO)
+        .sort((a, b) => b.memberCount - a.memberCount);
 
     const container = document.getElementById("treaty-list");
     container.innerHTML = `<h4 class="treaty-title">Treaties & Members<br>Total Treaties:  ${countryTreaties.length}</h4>` +
