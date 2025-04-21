@@ -1,0 +1,509 @@
+	1.	European Union: https://european-union.europa.eu/index_en
+	2.	United Nations: https://www.un.org/en/
+	3.	NATO: https://www.nato.int/
+	4.	UNESCO: https://www.unesco.org/en ￼
+	5.	World Health Organization: https://www.who.int/
+	6.	World Trade Organization: https://www.wto.org/
+	7.	Interpol: https://www.interpol.int/en
+	8.	Council of Europe: https://www.coe.int/en/web/portal
+	9.	Universal Postal Union (UPU): https://www.upu.int/en/home
+	10.	Organisation for Economic Co-operation and Development (OECD): https://www.oecd.org/en.html
+	11.	Warsaw Pact: This organization was dissolved in 1991 and does not have an official website.
+	12.	Visa Waiver Program: https://travel.state.gov/content/travel/en/us-visas/tourism-visit/visa-waiver-program.html
+	13.	Organization for Security and Co-operation in Europe (OSCE): https://www.osce.org/
+	14.	World Meteorological Organization: https://wmo.int/
+	15.	Treaty on the Non-Proliferation of Nuclear Weapons: https://disarmament.unoda.org/wmd/nuclear/npt/
+	16.	International Bank for Reconstruction and Development: https://www.worldbank.org/
+	17.	COMECON: This organization was dissolved in 1991 and does not have an official website.
+	18.	Visegrád Group: https://www.visegradgroup.eu/
+	19.	International Telecommunication Union: https://www.itu.int/
+	20.	International Centre for Migration Policy Development: https://www.icmpd.org/
+	21.	Organization of Turkic States: https://turkicstates.org/en
+	22.	World Customs Organization: https://www.wcoomd.org/
+	23.	International Finance Corporation: https://www.ifc.org/en/home ￼
+	24.	Eurocontrol: https://www.eurocontrol.int/
+	25.	Australia Group: https://www.dfat.gov.au/publications/minisite/theaustraliagroupnet/site/en/index.html
+	26.	International Holocaust Remembrance Alliance: https://holocaustremembrance.com/
+	27.	International Energy Agency: https://www.iea.org/
+	28.	International Development Association: https://ida.worldbank.org/en/home
+	29.	Organisation for the Prohibition of Chemical Weapons: https://www.opcw.org/ ￼
+	30.	International Centre for Settlement of Investment Disputes: https://icsid.worldbank.org/ ￼
+	31.	Multilateral Investment Guarantee Agency: https://www.miga.org/ ￼
+	32.	Missile Technology Control Regime: https://www.mtcr.info/en ￼
+	33.	Nuclear Suppliers Group: https://nuclearsuppliersgroup.org/index.php/en/ ￼
+	34.	Strategic Airlift Capability: https://www.nato.int/cps/en/natohq/topics_50107.htm ￼
+	35.	Treaty on Open Skies: https://2009-2017.state.gov/t/avc/cca/os/index.htm ￼
+	36.	Schengen Area: https://ec.europa.eu/home-affairs/policies/schengen-borders-and-visa/schengen-area_en
+	37.	Movement Coordination Centre Europe: https://www.mcce-mil.org/
+	38.	Group on Earth Observations: https://earthobservations.org/
+	39.	United Nations Security Council: https://www.un.org/securitycouncil/
+	40.	League of Nations: This organization was dissolved in 1946 and does not have an official website.
+	41.	European Space Agency (ESA): https://www.esa.int/
+	42.	European Air Transport Command (EATC): https://eatc-mil.com/
+	43.	European Southern Observatory (ESO): https://www.eso.org/ ￼
+	44.	Asian Development Bank (ADB): https://www.adb.org/
+	45.	Central American Bank for Economic Integration (CABEI): https://www.bcie.org/en/ ￼
+	46.	International Hydrographic Organization (IHO): https://iho.int/ ￼
+	47.	African Development Bank (AfDB): https://www.afdb.org/en ￼
+	48.	Organization of Ibero-American States (OEI): https://oei.int/ ￼
+	49.	Organisation for Joint Armament Cooperation (OCCAR): https://www.occar.int/
+	50.	Member States of the Organization of Ibero-American States: https://www.segib.org/en/ibero-american-organizations/
+	1.	G20 (Group of Twenty)
+Official Website: https://g20.org/
+	2.	Organization of American States (OAS)
+Official Website: https://www.oas.org/en/
+	3.	Asia-Pacific Economic Cooperation (APEC)
+Official Website: https://www.apec.org/
+	4.	North American Free Trade Agreement (NAFTA)
+Note: NAFTA was replaced by the United States–Mexico–Canada Agreement (USMCA) in 2020.
+	5.	Arctic Council
+Official Website: https://arctic-council.org/
+	6.	Group of Ten (G10)
+Official Website: https://www.imf.org/en/About/Factsheets/Sheets/2016/08/01/16/16/Group-of-Ten
+	7.	G7 (Group of Seven)
+Official Website: https://www.g7italy.it/en/
+	8.	ABCANZ Armies
+Official Website: https://www.army.mil/article/35904/the_abca_armiesacaac_program
+	9.	AUSCANNZUKUS
+Official Website: https://www.dsp.dla.mil/Programs/International-Standardization/
+	10.	Air Force Interoperability Council (AFIC)
+Official Website: https://community.apan.org/wg/afic/
+	11.	Combined Communications-Electronics Board (CCEB)
+Official Website: https://www.dsp.dla.mil/Programs/International-Standardization/
+	12.	The Technical Cooperation Program (TTCP)
+Official Website: https://www.dst.defence.gov.au/partnership/technical-cooperation-program
+	13.	Benelux
+Official Website: https://www.benelux.int/en/
+	14.	Organisation internationale de la Francophonie (OIF)
+Official Website: https://www.francophonie.org/
+	15.	Dutch Language Union (Nederlandse Taalunie)
+Official Website: https://taalunie.org/english-information
+	16.	European Coal and Steel Community (ECSC)
+Note: The ECSC was dissolved in 2002 and does not have an official website.
+	17.	Antarctic Treaty System
+Official Website: https://www.ats.aq/
+	18.	European Payments Union (EPU)
+Note: The EPU was dissolved in 1958 and does not have an official website.
+	19.	Global Biodiversity Information Facility (GBIF)
+Official Website: https://www.gbif.org/
+	20.	Belgium–Luxembourg Economic Union (BLEU)
+Note: BLEU is a bilateral economic agreement and does not have a standalone official website.
+	1.	Nordic Council
+Official Website: https://www.norden.org/en/nordic-council
+	2.	European Free Trade Association (EFTA)
+Official Website: https://www.efta.int/
+	3.	Partnership for Peace (PfP)
+Official Website: https://www.nato.int/cps/po/natohq/topics_50349.htm
+	4.	Council of the Baltic Sea States (CBSS)
+Official Website: https://cbss.org/
+	5.	Nordic Battle Group
+Information: https://www.forsvarsmakten.se/en/news/2014/08/nordic-battlegroup-in-120-seconds/
+	6.	Barents Euro-Arctic Council (BEAC)
+Official Website: https://barents-council.org/
+	7.	International Monetary Fund (IMF)
+Official Website: https://www.imf.org/en/Home
+	8.	World Intellectual Property Organization (WIPO)
+Official Website: https://www.wipo.int/
+	9.	Weimar Triangle
+Information: https://www.gov.pl/web/diplomacy/weimar-triangle
+	10.	Convention on Preventing and Combating Violence Against Women and Domestic Violence (Istanbul Convention)
+Official Website: https://www.coe.int/en/web/istanbul-convention
+	11.	Baltic Assembly
+Official Website: https://www.baltasam.org/
+	12.	International Red Cross and Red Crescent Movement
+Official Website: https://www.ifrc.org/
+	13.	G8
+Note: The G8 has reverted to the G7 format since 2014.
+	14.	International Atomic Energy Agency (IAEA)
+Official Website: https://www.iaea.org/
+	15.	CERN (European Organization for Nuclear Research)
+Official Website: https://home.cern/
+	16.	International Criminal Court (ICC)
+Official Website: https://www.icc-cpi.int/
+	17.	European Economic Community (EEC)
+Note: The EEC was integrated into the European Union and no longer exists as a separate entity.
+	18.	International Labour Organization (ILO)
+Official Website: https://www.ilo.org/
+	19.	UN Tourism (formerly UNWTO)
+Official Website: https://www.unwto.org/
+	20.	Food and Agriculture Organization (FAO)
+Official Website: https://www.fao.org/
+1.	Latin Union
+The Latin Union suspended its activities in 2012 and does not have an active official website.
+	2.	International Civil Aviation Organization (ICAO)
+Official Website: https://www.icao.int/
+	3.	Office of the United Nations High Commissioner for Refugees (UNHCR)
+Official Website: https://www.unhcr.org/
+	4.	Inter-Parliamentary Union (IPU)
+Official Website: https://www.ipu.org/
+	5.	United Nations Conference on Trade and Development (UNCTAD)
+Official Website: https://unctad.org/
+	6.	Western European Union (WEU)
+The WEU was officially dissolved on 30 June 2011 and no longer has an official website.
+	7.	Union for the Mediterranean (UfM)
+Official Website: https://ufmsecretariat.org/
+	8.	International Maritime Organization (IMO)
+Official Website: https://www.imo.org/
+	9.	Bank for International Settlements (BIS)
+Official Website: https://www.bis.org/
+1.	United Nations Industrial Development Organization (UNIDO)
+Official Website: https://www.unido.org/
+	2.	International Organization for Migration (IOM)
+Official Website: https://www.iom.int/
+	3.	European Bank for Reconstruction and Development (EBRD)
+Official Website: https://www.ebrd.com/home.html
+	4.	International Fund for Agricultural Development (IFAD)
+Official Website: https://www.ifad.org/en/
+	5.	United Nations Truce Supervision Organization (UNTSO)
+Official Website: https://untso.unmissions.org/
+	6.	International Chamber of Commerce (ICC)
+Official Website: https://iccwbo.org/
+	7.	Permanent Court of Arbitration (PCA)
+Official Website: https://pca-cpa.org/home/
+	8.	Inter-American Development Bank (IDB)
+Official Website: https://www.iadb.org/en
+	9.	Euro-Atlantic Partnership Council (EAPC)
+Official Website: https://www.nato.int/cps/cn/natohq/topics_49276.htm
+	10.	International Mobile Satellite Organization (IMSO)
+Official Website: https://imso.org/
+	11.	Caribbean Development Bank (CDB)
+Official Website: https://www.caribank.org/home
+	12.	Procurement G6
+Note: The Procurement G6 is an informal group of national central purchasing bodies and does not have a dedicated official website.
+	13.	International Military Sports Council (CISM)
+Official Website: https://www.milsport.one/
+	14.	International Civil Defence Organisation (ICDO)
+Official Website: https://icdo.org/
+	15.	Community of Portuguese Language Countries (CPLP)
+Official Website: https://www.cplp.org/
+	16.	Mercosur (Southern Common Market)
+Official Website: https://www.mercosur.int/
+	17.	National Aeronautics and Space Administration (NASA)
+Official Website: https://www.nasa.gov/
+	18.	United Nations Economic Commission for Latin America and the Caribbean (ECLAC)
+Official Website: https://www.cepal.org/en
+	19.	International Olympic Committee (IOC)
+Official Website: https://olympics.com/ioc
+	20.	International Coffee Organization (ICO)
+Official Website: https://www.ico.org/
+	21.	Non-Aligned Movement (NAM)
+Note: The Non-Aligned Movement does not have a centralized official website.
+1.	American Convention on Human Rights
+Official Text: Organization of American States (OAS)
+	2.	Latin American Integration Association (ALADI)
+Official Website: https://www.aladi.org/
+	3.	Rio Group
+Note: The Rio Group has been succeeded by the Community of Latin American and Caribbean States (CELAC).
+	4.	Group of 15 (G-15)
+Information: United Nations Department of Economic and Social Affairs
+	5.	Community of Latin American and Caribbean States (CELAC)
+Information: Colombian Ministry of Foreign Affairs
+	6.	International Trade Union Confederation (ITUC)
+Official Website: https://www.ituc-csi.org/
+	7.	Conference on Disarmament
+Official Website: United Nations Office for Disarmament Affairs
+	8.	Agency for the Prohibition of Nuclear Weapons in Latin America and the Caribbean (OPANAL)
+Official Website: https://www.opanal.org/en/home-2/
+	9.	Commonwealth of Nations
+Official Website: https://thecommonwealth.org/
+	10.	ASEAN Regional Forum (ARF)
+Official Website: https://aseanregionalforum.asean.org/
+	11.	Five Eyes
+Note: The Five Eyes is an intelligence alliance comprising Australia, Canada, New Zealand, the United Kingdom, and the United States. It does not have a centralized official website.
+	12.	European Economic Area (EEA)
+Information: European Economic and Social Committee
+	13.	1990 Schengen Convention
+Official Text: EUR-Lex
+	14.	EFTA Court
+Official Website: https://eftacourt.int/
+	15.	CGIAR (Consultative Group on International Agricultural Research)
+Official Website: https://www.cgiar.org/
+	16.	States with Nuclear Weapons
+Note: There is no official website for this classification. Information can be found through reputable international organizations such as the United Nations or the International Atomic Energy Agency.
+	17.	Southeast Asia Treaty Organization (SEATO)
+Note: SEATO was dissolved in 1977 and does not have an official website.
+	18.	Open Government Partnership (OGP)
+Official Website: https://www.opengovpartnership.org/
+	19.	BRICS
+Note: BRICS does not have a centralized official website. Information can be found through the official websites of its member countries.
+	20.	United Nations–African Union Hybrid Operation in Darfur (UNAMID)
+Note: UNAMID concluded its mandate on 31 December 2020. Information can be found on the United Nations Peacekeeping website.
+Certainly! Here are the official websites or authoritative sources for the organizations you’ve listed:
+	1.	Shanghai Cooperation Organisation (SCO)
+Official Website: https://eng.sectsco.org/
+	2.	BRIC
+Note: BRIC (Brazil, Russia, India, China) evolved into BRICS with the inclusion of South Africa. BRICS does not have a centralized official website; information is typically disseminated through the official channels of its member countries.
+	3.	Union of South American Nations (UNASUR)
+Official Website: http://www.unasursg.org/
+	4.	South Atlantic Peace and Cooperation Zone (ZPCAS)
+ZPCAS does not have a centralized official website; information is available through the foreign ministries of member states.
+	5.	ABC nations (Argentina, Brazil, Chile)
+This refers to a historical alliance and does not have an official website.
+	6.	Union between Sweden and Norway
+This was a historical union (1814–1905) and does not have an official website.
+	7.	Kalmar Union
+A historical union (1397–1523) between Denmark, Norway, and Sweden; no official website exists.
+	8.	Carbon Neutrality Coalition
+Information is available through the United Nations Framework Convention on Climate Change (UNFCCC): https://unfccc.int/
+	9.	Summits of the Americas
+Information: https://www.summit-americas.org/
+	10.	Andean Community (Comunidad Andina - CAN)
+Official Website: https://www.comunidadandina.org/
+	11.	Latin American and Caribbean Parliament (Parlatino)
+Official Website: https://parlatino.org/
+	12.	Ibero-American Summit
+Information: https://www.segib.org/en/ibero-american-summits/
+	13.	Amazon Cooperation Treaty Organization (ACTO)
+Official Website: https://otca.org/en/
+	14.	Latin American and the Caribbean Economic System (SELA)
+Official Website: https://www.sela.org/en/
+	15.	G4 Nations
+The G4 (Brazil, Germany, India, Japan) does not have a centralized official website; information is available through the foreign ministries of the member countries.
+	16.	Cairns Group
+Official Website: https://www.cairnsgroup.org/
+	17.	G8+5
+This was an informal group and does not have an official website.
+	18.	IBSA Dialogue Forum
+Official Website: https://www.ibsa-trilateral.org/
+	19.	Summit of South American-Arab Countries (ASPA)
+Information is available through the foreign ministries of member states; no centralized official website exists.
+	20.	Forum of East Asia–Latin America Cooperation (FEALAC)
+Official Website: https://www.fealac.org/
+
+Certainly! Here are the official websites or authoritative sources for the organizations and agreements you’ve listed:
+	1.	World Bank
+Official Website: https://www.worldbank.org/
+	2.	Eurozone
+Information: https://european-union.europa.eu/institutions-law-budget/euro_en
+	3.	European Atomic Energy Community (Euratom)
+Information: https://euratom-supply.ec.europa.eu/index_en
+	4.	European Convention on Human Rights (ECHR)
+Official Text: https://www.echr.coe.int/european-convention-on-human-rights
+	5.	General Agreement on Tariffs and Trade (GATT)
+Official Text: https://www.wto.org/english/docs_e/legal_e/gatt47_01_e.htm
+	6.	United Nations Framework Convention on Climate Change (UNFCCC)
+Official Website: https://unfccc.int/
+	7.	Berne Convention for the Protection of Literary and Artistic Works
+Official Text: https://www.wipo.int/treaties/en/ip/berne/
+	8.	United Nations Convention to Combat Desertification (UNCCD)
+Official Website: https://www.unccd.int/
+	9.	Comprehensive Nuclear-Test-Ban Treaty Organization (CTBTO)
+Official Website: https://www.ctbto.org/
+	10.	International Commission for the Protection of the Danube River (ICPDR)
+Official Website: https://www.icpdr.org/
+	11.	Paris Charter (Charter of Paris for a New Europe)
+Official Text: https://www.osce.org/mc/39516
+	12.	Convention on the Rights of Persons with Disabilities (CRPD)
+Official Text: https://www.ohchr.org/en/instruments-mechanisms/instruments/convention-rights-persons-disabilities
+	13.	IT Planning Council (Germany)
+Official Website: https://www.it-planungsrat.de/en/
+	14.	International Commission for the Protection of the Rhine (ICPR)
+Official Website: https://www.iksr.org/en/icpr
+	15.	Economic and Monetary Union (EMU)
+Information: https://economy-finance.ec.europa.eu/economic-and-monetary-union_en
+	16.	Organization of the Black Sea Economic Cooperation (BSEC)
+Official Website: http://www.bsec-organization.org/
+	17.	Digital 9 (D9)
+Note: The Digital 9 is an informal network of leading digital governments. Information can be found through the respective government websites of member countries.
+	18.	African Union (AU)
+Official Website: https://au.int/
+	19.	Commonwealth of Independent States (CIS)
+Official Website: http://www.cisstat.com/
+	20.	Union State (Russia and Belarus)
+Official Website: http://www.soyuz.by/
+
+
+Certainly! Here are the official websites or authoritative sources for the organizations you’ve listed:
+	1.	Eastern Partnership
+Official Website: https://www.eeas.europa.eu/eeas/eastern-partnership_en
+	2.	Collective Security Treaty Organization (CSTO)
+Official Website: https://en.odkb-csto.org/
+	3.	Eurasian Economic Community (EurAsEC)
+Note: The EurAsEC was dissolved in 2014 and succeeded by the Eurasian Economic Union (EAEU).
+EAEU Official Website: https://www.eaeunion.org/
+	4.	Commonwealth of Independent States Free Trade Area (CIS FTA)
+Information on the CIS Free Trade Area can be found on the World Trade Organization’s Regional Trade Agreements database:
+https://rtais.wto.org/UI/PublicShowMemberRTAIDCard.aspx?rtaid=762
+	5.	GUAM Organization for Democracy and Economic Development
+Official Website: https://guam-organization.org/en/
+	6.	Organisation of Islamic Cooperation (OIC)
+Official Website: https://www.oic-oci.org/
+	7.	MIKTA (Mexico, Indonesia, South Korea, Turkey, Australia)
+Note: MIKTA is an informal partnership without a centralized official website. Information can be found through the foreign ministries of member countries.
+	8.	Arab League (League of Arab States)
+Official Website: https://www.lasportal.org/
+	9.	Arab Monetary Fund (AMF)
+Official Website: https://www.amf.org.ae/en
+	10.	Arab Fund for Economic and Social Development (AFESD)
+Official Website: https://www.arabfund.org/
+	11.	Arab Bank for Economic Development in Africa (BADEA)
+Official Website: https://www.badea.org/
+	12.	African Continental Free Trade Area (AfCFTA)
+Official Website: https://au-afcfta.org/
+	13.	Organisation of African, Caribbean and Pacific States (OACPS)
+Official Website: https://www.oacps.org/
+	14.	Economic Community of West African States (ECOWAS)
+Official Website: http://www.comm.ecowas.int/
+	15.	Southern African Development Community (SADC)
+Official Website: https://www.sadc.int/
+	16.	Southern African Customs Union (SACU)
+Official Website: https://www.sacu.int/
+	17.	Association of Southeast Asian Nations (ASEAN)
+Official Website: https://asean.org/
+	18.	Alliance of Small Island States (AOSIS)
+Official Website: https://www.aosis.org/
+	19.	ANZUK (Australia, New Zealand, United Kingdom)
+Note: ANZUK was a historical military alliance from the 1970s and does not have an official website.
+
+If you need further information or assistance with more organizations, feel free to ask!
+
+Certainly! Here are the official websites or authoritative sources for the organizations you’ve listed:
+	1.	AUKUS (Australia–United Kingdom–United States Security Partnership)
+Official Website: https://www.defense.gov/Spotlights/AUKUS/
+	2.	Central Asian Cooperation Organization
+Information: https://uia.org/s/or/en/1100011694
+	3.	Potential Enlargement of the European Union
+Information: https://neighbourhood-enlargement.ec.europa.eu/enlargement-policy/strategy-and-reports_en
+	4.	European Civil Aviation Conference (ECAC)
+Official Website: https://www.ecac-ceac.org/
+	5.	European Common Aviation Area (ECAA)
+Information: https://transport.ec.europa.eu/transport-modes/air/international-aviation/status-aviation-relations-country/ecaa_en
+	6.	Montenegro–Ukraine Free Trade Area
+Information: https://me.gov.ua/Documents/Detail?id=ae05e1dd-9e28-47be-8b4c-40f820536e35&lang=en-GB&title=FreeTradeAgreementBetweenTheGovernmentOfUkraineAndGovernmentOfMontenegro
+	7.	Caribbean Community (CARICOM)
+Official Website: https://caricom.org/
+	8.	Caribbean Disaster Emergency Management Agency (CDEMA)
+Official Website: https://www.cdema.org/
+	9.	Caribbean Free Trade Association (CARIFTA)
+Information: https://caricom.org/the-caribbean-free-trade-association-carifta/
+	10.	Central American Common Market (CACM)
+Information: https://rtais.wto.org/UI/PublicShowMemberRTAIDCard.aspx?rtaid=151
+	11.	International Regional Organization for Agricultural Health (OIRSA)
+Official Website: http://www.oirsa.org.sv/
+	12.	International Renewable Energy Agency (IRENA)
+Official Website: https://www.irena.org/
+	13.	Bolivarian Alliance for the Americas (ALBA-TCP)
+Official Website: https://www.albatcp.org/en/
+	14.	Organization of World Heritage Cities (OWHC)
+Official Website: https://www.ovpm.org/
+	15.	Creative Cities Network (UNESCO)
+Official Website: https://www.unesco.org/en/creative-cities
+	16.	West Nordic Council
+Information: https://arcticiceland.is/members/west-nordic-council
+	17.	Overseas Countries and Territories Association (OCTA)
+Official Website: https://www.octa-innovation.eu/
+	18.	Inuit Circumpolar Council (ICC)
+Official Website: https://www.inuitcircumpolar.com/
+	19.	International Organization for Standardization (ISO)
+Official Website: https://www.iso.org/
+	20.	Group of 77 (G77)
+Official Website: https://www.g77.org/
+	21.	Lomé Convention
+Information: https://ec.europa.eu/international-partnerships/lome-convention_en
+
+If you need further information or assistance with more organizations, feel free to ask!
+
+Certainly! Here are the official websites or authoritative sources for the organizations you’ve listed:
+	1.	International Confederation of Free Trade Unions (ICFTU)
+Note: The ICFTU merged into the International Trade Union Confederation (ITUC) in 2006.
+Official Website: https://www.ituc-csi.org/
+	2.	United Nations Economic Commission for Europe (UNECE)
+Official Website: https://unece.org/homepage
+	3.	Intelsat
+Official Website: https://www.intelsat.com/
+	4.	University of Teacher Education in Special Needs (HfH)
+Official Website: https://www.hfh.ch/en
+	5.	International Lake Constance Conference (IBK)
+Information: https://www.llv.li/en/individuals/health-care-and-care/health-and-prevention/bodenseekonferenz-ibk
+	6.	Cooperation Council for the Arab States of the Gulf (GCC)
+Official Website: https://gcc-sg.org/en/Pages/default.aspx
+	7.	Central European Free Trade Agreement (CEFTA)
+Official Website: https://cefta.int/
+	8.	g7+
+Official Website: https://www.g7plus.org/
+	9.	Association of Caribbean States (ACS)
+Official Website: http://www.acs-aec.org/
+	10.	Organization of the Petroleum Exporting Countries (OPEC)
+Official Website: https://www.opec.org/
+	11.	Economic Community of Central African States (ECCAS)
+Official Website: https://ceeac-eccas.org/en/
+	12.	Bank of Central African States (BEAC)
+Official Website: https://www.beac.int/en/
+	13.	Organisation for the Harmonization of Business Law in Africa (OHADA)
+Official Website: https://www.ohada.org/en/
+	14.	Gulf of Guinea Commission (GGC)
+Information: https://ecfr.eu/special/african-cooperation/gulf-of-guinea-commission/
+	15.	AFRISTAT (Observatoire Économique et Statistique d’Afrique Subsaharienne)
+Official Website: https://www.afristat.org/
+	16.	ANZUS (Australia, New Zealand, United States Security Treaty)
+Note: ANZUS is a historical military alliance and does not have a centralized official website.
+	17.	South Asian Association for Regional Cooperation (SAARC)
+Official Website: https://saarc-sec.org/
+	18.	Bay of Bengal Initiative for Multi-Sectoral Technical and Economic Cooperation (BIMSTEC)
+Official Website: https://bimstec.org/
+	19.	Islamic World Educational, Scientific and Cultural Organization (ICESCO)
+Official Website: https://www.icesco.org/en/
+	20.	World Federation of Trade Unions (WFTU)
+Official Website: https://www.wftucentral.org/
+
+If you need further information or assistance with more organizations, feel free to ask!
+
+Certainly! Here are the official websites or authoritative sources for the organizations you’ve listed:
+	1.	International Telecommunications Satellite Organization (ITSO)
+Official Website: https://itso.int/
+	2.	Lake Chad Basin Commission (LCBC)
+Official Website: https://cblt.org/
+	3.	Multinational Joint Task Force (MNJTF)
+Official Website: https://mnjtffmm.org/
+	4.	Conseil de l’Entente
+Official Website: https://conseildelentente.org/
+	5.	African Groundnut Council
+Information: https://uia.org/s/or/en/1100048925
+	6.	FIFA (Fédération Internationale de Football Association)
+Official Website: https://www.fifa.com/
+	7.	Association of National Olympic Committees (ANOC)
+Official Website: https://www.anocolympic.org/
+	8.	Indian Ocean Commission (IOC)
+Official Website: https://www.commissionoceanindien.org/en/
+	9.	Caribbean Forum (CARIFORUM)
+Information: https://trade.ec.europa.eu/access-to-markets/en/glossary/caribbean-forum
+	10.	Petrocaribe
+Information: https://en.wikipedia.org/wiki/Petrocaribe
+	11.	Asian Infrastructure Investment Bank (AIIB)
+Official Website: https://www.aiib.org/en/index.html
+	12.	United Nations Convention on the Law of the Sea (UNCLOS)
+Official Website: https://www.un.org/depts/los/index.htm
+	13.	Arab Information and Communication Technologies Organization (AICTO)
+Official Website: https://www.aicto.org/
+	14.	Arab Maghreb Union (AMU)
+Official Website: https://maghrebarabe.org/en/
+	15.	Community of Sahel-Saharan States (CEN-SAD)
+Information: https://au.int/en/recs/censad
+	16.	Mano River Union
+Information: https://en.wikipedia.org/wiki/Mano_River_Union
+	17.	Organisation of African Unity (OAU)
+Note: The OAU was succeeded by the African Union (AU) in 2002.
+African Union Official Website: https://au.int/
+	18.	United Nations Economic Commission for Africa (UNECA)
+Official Website: https://www.uneca.org/
+	19.	Francophonie (Organisation internationale de la Francophonie - OIF)
+Official Website: https://www.francophonie.org/
+
+If you need further information or assistance with more organizations, feel free to ask!
+
+1.	Maghreb
+The Maghreb is a geographic region in North Africa comprising countries like Algeria, Libya, Mauritania, Morocco, and Tunisia. It is not an organization with a centralized official website.
+	2.	Internet Corporation for Assigned Names and Numbers (ICANN)
+Official Website: https://www.icann.org/
+	3.	Financial Action Task Force (FATF)
+Official Website: https://www.fatf-gafi.org/
+	4.	Egmont Group of Financial Intelligence Units
+Official Website: https://egmontgroup.org/
+	5.	World Tourism Cities Federation (WTCF)
+Official Website: https://www.wtcf.travel/
+	6.	Man and the Biosphere Programme (MAB) – UNESCO
+Official Website: https://www.unesco.org/en/mab
+	7.	União das Cidades Capitais Luso-Afro-Américo-Asiáticas (UCCLA)
+Official Website: https://www.uccla.pt/en
+	8.	Netherlands-Indonesian Union
+The Netherlands-Indonesian Union was a historical confederation formed in 1949 and dissolved in 1956. It does not have an official website. For more information, you can refer to this article: https://en.wikipedia.org/wiki/Netherlands-Indonesia_Union

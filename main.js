@@ -155,7 +155,20 @@ async function renderMap(isoCode) {
 
     const container = document.getElementById("treaty-list");
     container.innerHTML = `<h4 class="treaty-title">Treaties & Members<br>Total Treaties:  ${countryTreaties.length}</h4>` +
-        countryTreaties.map(org => `<div class="treaty-label" data-treaty="${org.organization_name}">${org.organization_name}:  ${org.memberCount} Mbrs.</div>`).join('');
+    countryTreaties.map(org => {
+        const tooltip = org.description || 'No description available';
+        const labelHTML = `${org.organization_name}: ${org.memberCount} Mbrs.`;
+
+        if (org.officialWebsite) {
+            return `<a href="${org.officialWebsite}" target="_blank" class="treaty-label" data-treaty="${org.organization_name}" title="${tooltip}" style="display: block;">
+                ${labelHTML}
+            </a>`;
+        } else {
+            return `<div class="treaty-label" data-treaty="${org.organization_name}" title="${tooltip}" style="display: block;">
+                ${labelHTML}
+            </div>`;
+        }
+    }).join('');
 
     document.querySelectorAll(".treaty-label").forEach(label => {
         const treaty = countryTreaties.find(t => t.organization_name === label.dataset.treaty);

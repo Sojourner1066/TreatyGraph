@@ -285,9 +285,8 @@ body {
 
 /* Default style */
 .treaty-label {
-  color: #222;
-  transition: color 0.2s ease;
-  cursor: pointer;
+  display: block;
+  margin-bottom: 4px; /* Optional spacing */
 }
 
 /* Dim all labels when *any* one is hovered */
